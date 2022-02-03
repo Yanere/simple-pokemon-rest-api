@@ -40,7 +40,7 @@ exports.getAllPokemon = async (req, res) => {
           break;
       }
     }
-
+    query.sort({ id: 1 });
     const data = await query;
     res.status(200).json({
       status: "success",
